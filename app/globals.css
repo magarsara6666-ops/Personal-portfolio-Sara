@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --wine: #701f3a;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #231a1d; background: #fffdfc; }
+::selection { background: #f1ccd5; color: #531328; }
+
+@layer components {
+  .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+  .eyebrow { @apply text-xs font-extrabold uppercase tracking-[0.22em] text-wine; }
+  .display-title { @apply font-serif text-4xl font-semibold leading-[0.98] tracking-[-0.035em] text-merlot sm:text-5xl lg:text-6xl; }
+  .section-title { @apply font-serif text-4xl font-semibold leading-[1.03] tracking-[-0.03em] text-merlot sm:text-5xl; }
+  .btn-primary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-wine px-6 py-3 text-sm font-extrabold text-white shadow-lg shadow-wine/20 transition hover:-translate-y-0.5 hover:bg-merlot focus:outline-none focus:ring-4 focus:ring-wine/20; }
+  .btn-secondary { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-wine/25 bg-white px-6 py-3 text-sm font-extrabold text-wine transition hover:-translate-y-0.5 hover:border-wine hover:bg-blush/40 focus:outline-none focus:ring-4 focus:ring-wine/10; }
+  .field { @apply w-full rounded-2xl border border-[#dfcfd4] bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-[#9c8b91] focus:border-wine focus:ring-4 focus:ring-wine/10; }
+  .field-label { @apply mb-2 block text-sm font-bold text-ink; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up { animation: fadeUp .7s ease both; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+}
