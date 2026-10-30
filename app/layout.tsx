@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MedStitch Scrub Dress | Comfort for every shift",
-  description: "Premium scrub sets for nurses, doctors and healthcare professionals. Order with Cash on Delivery across Nepal.",
+  title: "MAGARSARA | Freelance Digital Marketing",
+  description: "Freelance digital strategy, content, campaigns, SEO, and landing pages for ambitious brands ready to grow with clarity.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

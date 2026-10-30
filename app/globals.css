@@ -4,13 +4,13 @@
 
 :root {
   color-scheme: light;
-  --wine: #701f3a;
+  --wine: #258f5b;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: #231a1d; background: #fffdfc; }
-::selection { background: #f1ccd5; color: #531328; }
+body { margin: 0; color: #183328; background: #f5fff9; }
+::selection { background: #bcefd0; color: #174d35; }
 
 @layer components {
   .container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }

@@ -5,14 +5,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        wine: "#701F3A",
-        merlot: "#531328",
-        blush: "#F7E5E8",
-        rosewater: "#FCF5F4",
-        ink: "#231A1D",
+        wine: "#258F5B",
+        merlot: "#174D35",
+        blush: "#DDF7E8",
+        rosewater: "#F5FFF9",
+        ink: "#183328",
+        leaf: "#54B978",
+        mint: "#EAF9F0",
       },
       boxShadow: {
-        soft: "0 20px 60px rgba(83, 19, 40, 0.12)",
+        soft: "0 20px 60px rgba(23, 77, 53, 0.14)",
       },
       fontFamily: {
         sans: ["Avenir Next", "Avenir", "Segoe UI", "sans-serif"],
