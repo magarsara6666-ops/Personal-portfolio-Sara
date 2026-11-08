@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ConsultationForm from "@/components/consultation-form";
 import {
   ArrowRight,
   BarChart3,
@@ -16,7 +17,7 @@ import {
 } from "lucide-react";
 
 const emailHref =
-  "mailto:magarsara6666@gmail.com?subject=Let%27s%20grow%20my%20brand%20with%20MAGARSARA";
+  "mailto:digitalmarketing@magarsara.com?subject=Let%27s%20grow%20my%20brand%20with%20MAGARSARA";
 
 const services = [
   { icon: Compass, number: "01", title: "Brand strategy", text: "Clear positioning, audience direction, and messaging that gives every campaign a stronger starting point." },
@@ -57,6 +58,7 @@ export default function HomePage() {
             <a className="transition hover:text-wine" href="#approach">Approach</a>
             <a className="transition hover:text-wine" href="#about">About</a>
             <a className="transition hover:text-wine" href="#faq">FAQ</a>
+            <a className="transition hover:text-wine" href="#consultation">Consultation</a>
           </nav>
           <a href={emailHref} className="btn-primary !min-h-10 !px-4 sm:!px-5">Start a project <ArrowRight size={15} /></a>
         </div>
@@ -144,13 +146,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="consultation" className="relative overflow-hidden bg-[#092018] py-24 text-white sm:py-32">
+        <div aria-hidden="true" className="absolute -left-40 -top-40 size-[32rem] rounded-full bg-[#5ac17f]/15 blur-3xl" />
+        <div aria-hidden="true" className="absolute -bottom-48 right-0 size-[34rem] rounded-full bg-[#bcefd0]/10 blur-3xl" />
+        <div className="container-page relative grid gap-12 lg:grid-cols-[.82fr_1.18fr] lg:items-center">
+          <div className="max-w-xl">
+            <p className="text-xs font-extrabold uppercase tracking-[.22em] text-[#8bdba9]">Your free consultation</p>
+            <h2 className="mt-5 font-serif text-5xl font-semibold leading-[.96] tracking-[-.04em] sm:text-6xl">Need help but don&apos;t know where to start?</h2>
+            <p className="mt-6 text-lg leading-8 text-white/70">Share a few details about your business. I&apos;ll help you understand what is holding your marketing back and point you toward the clearest next step.</p>
+            <ul className="mt-8 space-y-4 text-base font-semibold text-white/90">
+              {["A one-to-one discovery consultation", "Honest guidance on the support you need", "A practical direction tailored to your business", "No pressure and no confusing marketing jargon"].map((item) => <li key={item} className="flex items-start gap-3"><span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full border border-[#7cd79d] text-[#9de5b7]"><Check size={14} /></span>{item}</li>)}
+            </ul>
+            <p className="mt-8 flex items-center gap-2 text-sm text-white/55"><Mail size={15} /> digitalmarketing@magarsara.com</p>
+          </div>
+          <ConsultationForm />
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-gradient-to-br from-[#123f2c] via-[#1f7a53] to-[#54b978] py-24 text-white sm:py-32">
         <div aria-hidden="true" className="absolute -left-32 top-1/2 size-80 -translate-y-1/2 rounded-full border-[70px] border-white/[.04]" />
-          <div className="container-page relative text-center"><p className="text-xs font-extrabold uppercase tracking-[.24em] text-[#d9f8e5]">Your next chapter can start here</p><h2 className="mx-auto mt-5 max-w-4xl font-serif text-5xl font-semibold leading-[.95] tracking-[-.04em] sm:text-7xl">Let’s make your brand impossible to overlook.</h2><p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">Tell me what you are building and where you want to go. I’ll help you find the clearest path forward.</p><a href={emailHref} className="mt-9 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-extrabold text-merlot transition hover:-translate-y-1 hover:bg-[#dff7e7]">Email MAGARSARA <ArrowRight size={17} /></a><a href={emailHref} className="mx-auto mt-5 flex w-fit items-center gap-2 text-sm font-semibold text-white/75 transition hover:text-white"><Mail size={15} /> magarsara6666@gmail.com</a></div>
+          <div className="container-page relative text-center"><p className="text-xs font-extrabold uppercase tracking-[.24em] text-[#d9f8e5]">Your next chapter can start here</p><h2 className="mx-auto mt-5 max-w-4xl font-serif text-5xl font-semibold leading-[.95] tracking-[-.04em] sm:text-7xl">Let’s make your brand impossible to overlook.</h2><p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">Tell me what you are building and where you want to go. I’ll help you find the clearest path forward.</p><a href="#consultation" className="mt-9 inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-white px-8 py-3 text-sm font-extrabold text-merlot transition hover:-translate-y-1 hover:bg-[#dff7e7]">Book a free consultation <ArrowRight size={17} /></a><a href={emailHref} className="mx-auto mt-5 flex w-fit items-center gap-2 text-sm font-semibold text-white/75 transition hover:text-white"><Mail size={15} /> digitalmarketing@magarsara.com</a></div>
       </section>
 
       <footer className="bg-[#173f2f] py-8 text-white/65">
-        <div className="container-page flex flex-col items-center justify-between gap-5 text-center text-sm sm:flex-row sm:text-left"><Image src="/images/magarsara-digital-marketing-logo.png" alt="MAGARSARA Digital Marketing" width={92} height={92} className="size-[92px] rounded-2xl object-cover" /><p>Freelance digital marketing · Nepal</p><a href={emailHref} className="flex items-center gap-2 font-semibold text-white transition hover:text-[#d6f7e2]"><Mail size={15} /> magarsara6666@gmail.com</a><a href={emailHref} className="font-semibold text-white transition hover:text-[#d6f7e2]">Start a project →</a></div>
+        <div className="container-page flex flex-col items-center justify-between gap-5 text-center text-sm sm:flex-row sm:text-left"><Image src="/images/magarsara-digital-marketing-logo.png" alt="MAGARSARA Digital Marketing" width={92} height={92} className="size-[92px] rounded-2xl object-cover" /><p>Freelance digital marketing · Nepal</p><a href={emailHref} className="flex items-center gap-2 font-semibold text-white transition hover:text-[#d6f7e2]"><Mail size={15} /> digitalmarketing@magarsara.com</a><a href="#consultation" className="font-semibold text-white transition hover:text-[#d6f7e2]">Book a consultation →</a></div>
       </footer>
     </main>
   );
